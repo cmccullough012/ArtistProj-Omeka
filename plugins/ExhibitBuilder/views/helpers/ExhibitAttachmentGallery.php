@@ -27,9 +27,7 @@ class ExhibitBuilder_View_Helper_ExhibitAttachmentGallery extends Zend_View_Help
         
         $html = '';
         foreach  ($attachments as $attachment) {
-            set_current_record(curr,$attachment);
-            $orientation = metadata($curr, array('Dublin Core', 'Type'));
-            $html .= '<div class="exhibit-item '.$orientation.' exhibit-gallery-item">';
+            $html .= '<div class="exhibit-item exhibit-gallery-item">';
             $html .= $this->view->exhibitAttachment($attachment, $fileOptions, $linkProps, true);
             $html .= '</div>';
         }
