@@ -26,4 +26,5 @@ $captionPosition = isset($options['captions-position'])
 </div>
 <?php echo $text; ?>
 
+
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

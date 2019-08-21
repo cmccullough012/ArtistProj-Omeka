@@ -21,13 +21,18 @@ class ExhibitBuilder_View_Helper_ExhibitAttachmentGallery extends Zend_View_Help
         if (!isset($fileOptions['imageSize'])) {
             $fileOptions['imageSize'] = 'square_thumbnail';
         }
-        
-        
+//        
+//        foreach ($attachments as $attachment):
+//            $item = $attachment->getItem();
+//        endforeach;
+//        
         
         
         $html = '';
         foreach  ($attachments as $attachment) {
-            $html .= '<div class="exhibit-item exhibit-gallery-item">';
+            $item = $attachment->getItem();
+            $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+            $html .= '<div class="exhibit-item '.$description.' exhibit-gallery-item">';
             $html .= $this->view->exhibitAttachment($attachment, $fileOptions, $linkProps, true);
             $html .= '</div>';
         }
