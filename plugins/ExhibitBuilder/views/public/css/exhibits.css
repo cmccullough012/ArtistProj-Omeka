@@ -62,3 +62,9 @@
 .download-file * {
     vertical-align: top;
 }
+
+/*ADDED STYLES*/
+.exhibits.show{
+    background-color:#171717;
+    color:white;
+}

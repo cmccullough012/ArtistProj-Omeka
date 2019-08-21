@@ -58,4 +58,5 @@ input[type="submit"] {
     color: <?php echo $homeIntroText; ?>;
 }
 
+
 </style>
