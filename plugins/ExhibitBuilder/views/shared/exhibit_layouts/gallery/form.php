@@ -55,6 +55,7 @@ $options = $block->getOptions();
             array(
                 'square_thumbnail' => __('Square Thumbnail'),
                 'thumbnail' => __('Thumbnail'),
+                'original' => __('Original'),
             ));
             
         ?>
