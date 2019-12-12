@@ -8,6 +8,7 @@
     ($homeIntroBg = get_theme_option('home_intro_background')) || ($homeIntroBg = "#FFFF00");
     ($homeIntroText = get_theme_option('home_intro_text')) || ($homeIntroText = "#000000");
     ($topNavHighlightText = get_theme_option('top_nav_highlight_text')) || ($buttonBg = "#FFFF00");
+    ($homeLinks = get_theme_option('home_intro_link')) || ($linkText = "#FFFF00");
 ?>
 
 <style>
@@ -56,6 +57,10 @@ input[type="submit"] {
 #intro {
     background-color: <?php echo $homeIntroBg; ?>;
     color: <?php echo $homeIntroText; ?>;
+}
+
+#intro a{
+    color: <?php echo $homeLinks; ?>;
 }
 
 
