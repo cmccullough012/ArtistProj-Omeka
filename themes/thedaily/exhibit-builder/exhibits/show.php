@@ -14,6 +14,7 @@ echo head(array(
 <nav id="exhibit-pages">
     <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
+    <h4><a href="http://archive.charmainewheatley.ca/exhibits" >Back to Exhibits</a></h4>
 </nav>
 
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
