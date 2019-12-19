@@ -1,12 +1,13 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime:400,400i,700,700i&display=swap');
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Courier Prime', monospace;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -371,7 +372,7 @@ textarea {
   * {
     box-sizing: border-box; }
   html {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-size: 3vmin;
     line-height: 4.5vmin;
     margin: 0;
@@ -562,9 +563,9 @@ textarea {
   #skipnav {
     display: none; }
   #site-title {
-    font-family: "Barlow", sans-serif;
+    font-family: "Courier Prime", monospace;
     font-size:4vmin;
-    font-weight:600;
+    font-weight:400;
     margin-right: auto;
     padding: 0; }
     #site-title img {
@@ -622,7 +623,7 @@ textarea {
         flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    font-weight:600;}
+    font-weight:400;}
   #top-nav > ul:hover{
     color:#FFFF00;
   }
