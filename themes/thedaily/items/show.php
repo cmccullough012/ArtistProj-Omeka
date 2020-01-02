@@ -1,4 +1,5 @@
 <?php
+$linkToFileMetadata = get_option('link_to_file_metadata');
 $itemFiles = $item->Files;
 $images = array();
 $nonImages = array();
@@ -12,9 +13,10 @@ foreach ($itemFiles as $itemFile) {
 }
 $hasImages = (count($images) > 0);
 if ($hasImages) {
-    queue_css_file('chocolat');
-    queue_js_file('modernizr', 'javascripts/vendor');
-    queue_js_file('jquery.chocolat.min', 'js');
+    queue_css_file('lightslider.min');
+    queue_css_file('lightgallery.min');
+    queue_js_file('lightgallery-all.min', 'js');
+    queue_js_file('lightslider.min', 'js');
     queue_js_file('items-show', 'js');
 }
 echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show'));
@@ -22,23 +24,29 @@ echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bod
 
 <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
-<!-- The following returns all of the files associated with an item. -->
 <?php if ($hasImages): ?>
-<div id="itemfiles" style="width: 100%; height: 50vh; background: #E0E0E0; margin:auto;"></div>
-<div id="itemfiles-nav">
-    <?php foreach ($images as $image): ?>
-        <a href="<?php echo $image->getWebPath('original'); ?>" class="chocolat-image">
-            <?php echo file_image('square_thumbnail', array(), $image); ?>
-        </a>
-    <?php endforeach; ?>
-</div>
+    <ul id="itemfiles" <?php echo (count($images) == 1) ? 'class="solo"' : ''; ?>>
+        <?php $imageCount = 0; ?>
+        <?php foreach ($images as $image): ?>
+        <?php $imageCount++; ?>
+        <?php $fileUrl = ($linkToFileMetadata == '1') ? record_url($image) : $image->getWebPath('original'); ?>
+        <li 
+            data-src="<?php echo $image->getWebPath('original'); ?>" 
+            data-thumb="<?php echo $image->getWebPath('square_thumbnail'); ?>" 
+            data-sub-html=".media-link-<?php echo $imageCount; ?>"
+            class="media resource"
+        >
+            <div class="media-render">
+            <?php echo file_image('original', array(), $image); ?>
+            </div>
+            <div class="media-link-<?php echo $imageCount; ?>">
+            <a href="<?php echo $fileUrl; ?>"><?php echo metadata($image, 'display_title'); ?></a>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
 <?php endif; ?>
 
-<?php if ((count($nonImages) > 0) && get_theme_option('other_media') == 0): ?>
-    <?php foreach ($nonImages as $nonImage): ?>
-        <?php echo file_markup($nonImage); ?>
-    <?php endforeach; ?>
-<?php endif; ?>
 
 <?php echo all_element_texts('item'); ?>
 
@@ -60,9 +68,10 @@ echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bod
 
 <?php if ((count($nonImages) > 0) && get_theme_option('other_media') == 1): ?>
 <div id="other-media" class="element">
-    <h3>Other Media</h3>
+    <h3><?php echo __('Files'); ?></h3>
     <?php foreach ($nonImages as $nonImage): ?>
-    <div class="element-text"><a href="<?php echo file_display_url($nonImage, 'original'); ?>"><?php echo metadata($nonImage, 'display_title'); ?> - <?php echo $nonImage->mime_type; ?></a></div>
+    <?php $fileUrl = ($linkToFileMetadata == '1') ? record_url($nonImage) : $nonImage->getWebPath('original'); ?>
+    <div class="element-text"><a href="<?php echo $fileUrl; ?>"><?php echo metadata($nonImage, 'display_title'); ?> - <?php echo $nonImage->mime_type; ?></a></div>
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
