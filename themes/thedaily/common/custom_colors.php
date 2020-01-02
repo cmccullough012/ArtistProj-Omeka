@@ -3,6 +3,7 @@
     ($buttonText = get_theme_option('button_text')) || ($buttonText = "#000000");
     ($exhibitNavBg = get_theme_option('eb_nav_background')) || ($linkColor = "#FFFF00");
     ($exhibitNavText = get_theme_option('eb_nav_text')) || ($linkText = "#000000");
+    ($exhibitCurrentLink = get_theme_option('eb_current')) || ($linkColor = "#FFFF00");
     ($featuredBg = get_theme_option('featured_background')) || ($featuredBg = "#000000");
     ($featuredText = get_theme_option('featured_text')) || ($featuredText = "#FFFFFF");
     ($homeIntroBg = get_theme_option('home_intro_background')) || ($homeIntroBg = "#FFFF00");
@@ -45,6 +46,19 @@ input[type="submit"] {
     color: <?php echo $exhibitNavText; ?>;
 }
 
+#exhibit-pages li.current > a:before,
+#exhibit-pages li.parent.collapsed > a:before,
+#exhibit-pages li.current a
+{
+    color: <?php echo $exhibitCurrentLink; ?>;
+}    
+    
+nav#exhibit-pages li a:hover,
+nav#exhibit-pages h4 a:hover,
+.navigation li a:hover{
+    color: <?php echo $exhibitCurrentLink; ?> !important;
+}    
+    
 #featured .featured-meta > * {
     background-color: <?php echo $featuredBg; ?>;
     color: <?php echo $featuredText; ?>;
