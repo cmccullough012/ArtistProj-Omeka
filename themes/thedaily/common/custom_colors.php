@@ -38,11 +38,11 @@ input[type="submit"] {
     border-color: <?php echo $buttonText; ?>
 }
 
-#exhibit-pages {
+#exhibit-pages, .exhibits.browse {
     background-color: <?php echo $exhibitNavBg; ?>;
 }
 
-#exhibit-pages a {
+#exhibit-pages a, .exhibits.browse a, .exhibits.browse h1 {
     color: <?php echo $exhibitNavText; ?>;
 }
 
@@ -51,7 +51,20 @@ input[type="submit"] {
 #exhibit-pages li.current a
 {
     color: <?php echo $exhibitCurrentLink; ?>;
-}    
+}  
+    
+.items.show #wrap{
+    background-color:<?php echo $exhibitNavBg; ?>;
+    color:<?php echo $exhibitNavText; ?>;
+}
+    
+footer{
+    background-color:<?php echo $exhibitNavBg; ?>;
+}
+    
+footer a{
+    color:<?php echo $exhibitNavText; ?>;
+}
     
 nav#exhibit-pages li a:hover,
 nav#exhibit-pages h4 a:hover,

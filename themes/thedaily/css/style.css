@@ -1259,3 +1259,43 @@ textarea {
     color:#4E4F4F;
     font-size:1em;
 }*/
+
+.exhibits.browse #wrap nav ul li a{
+    color:black;
+}
+
+.items.show footer{
+    background-color:black;
+    margin-top:-30px;
+    padding-top:100px;
+}
+
+.items.show footer a{
+    color:white;
+}
+
+@media screen and (max-width: 640px){
+    .exhibits.show #wrap #content{
+        display:grid;
+    }
+    
+    .exhibits.show #wrap #content nav{
+        grid-row:3/4;
+    }
+    
+    .exhibits.show #wrap #content 1{
+        grid-row:1/2;
+    }
+    
+    .exhibits.show #wrap #content #exhibit-blocks{
+        grid-row:2/3;
+    }
+    
+    .grid-item{
+        width:46%;
+    }
+    
+    .grid-item--width2{
+        width:96%;
+    }
+}
