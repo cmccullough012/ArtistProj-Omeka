@@ -1264,15 +1264,11 @@ textarea {
     color:black;
 }
 
-.items.show footer{
-    background-color:black;
-    margin-top:-30px;
-    padding-top:100px;
+footer{
+    margin-top:-50px;
+    padding-top:120px;
 }
 
-.items.show footer a{
-    color:white;
-}
 
 @media screen and (max-width: 640px){
     .exhibits.show #wrap #content{
