@@ -38,13 +38,17 @@ input[type="submit"] {
     border-color: <?php echo $buttonText; ?>
 }
 
-#exhibit-pages, .exhibits.browse {
+#exhibit-pages, .exhibits.browse, .exhibits.summary{
     background-color: <?php echo $exhibitNavBg; ?>;
 }
 
-#exhibit-pages a, .exhibits.browse a, .exhibits.browse h1 {
+#exhibit-pages a, .exhibits.browse a, .exhibits.browse h1, .exhibits.summary a, .exhibits.summary h1,  .exhibits.summary{
     color: <?php echo $exhibitNavText; ?>;
 }
+    
+    .exhibit-block li a{
+        background-color:<?php echo $exhibitNavText; ?>;
+    }
 
 #exhibit-pages li.current > a:before,
 #exhibit-pages li.parent.collapsed > a:before,
