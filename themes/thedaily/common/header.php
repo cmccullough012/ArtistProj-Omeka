@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
     <?php if ( $description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
+<!--    Favicon-->
+
+    <link rel="icon" 
+      type="image/png" 
+      href="../omeka_favicon.png">
+<!--    end fav-->
     <?php endif; ?>
     <?php
     if (isset($title)) {

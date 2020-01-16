@@ -46,10 +46,22 @@ input[type="submit"] {
     color: <?php echo $exhibitNavText; ?>;
 }
     
-    .exhibit-block li a{
-        background-color:<?php echo $exhibitNavText; ?>;
-    }
+.exhibit-block li a, #exhibit-pages li.current ul li a{
+    background-color:<?php echo $exhibitNavText; ?>;
+}
 
+.exhibit-block li a:hover, .exhibit-block a:hover, .exhibit-block p a:hover {
+    background-color:<?php echo $exhibitCurrentLink; ?>;
+}   
+    
+.exhibit-block.layout-file a:hover, .exhibit-gallery-item a:hover{
+    background-color:transparent;
+}
+    
+.exhibit-block.layout-file a:hover > img{    
+    box-shadow:0px 0px 10px <?php echo $exhibitCurrentLink; ?>;
+}
+    
 #exhibit-pages li.current > a:before,
 #exhibit-pages li.parent.collapsed > a:before,
 #exhibit-pages li.current a
@@ -74,7 +86,16 @@ nav#exhibit-pages li a:hover,
 nav#exhibit-pages h4 a:hover,
 .navigation li a:hover{
     color: <?php echo $exhibitCurrentLink; ?> !important;
-}    
+} 
+
+.navigation.secondary-nav ul li a{
+    color:black !important;
+}
+
+.navigation.secondary-nav ul li a:hover, .item-pagination.navigation li a:hover{
+    color:black !important;
+    background-color: <?php echo $exhibitCurrentLink; ?>;
+}
     
 #featured .featured-meta > * {
     background-color: <?php echo $featuredBg; ?>;

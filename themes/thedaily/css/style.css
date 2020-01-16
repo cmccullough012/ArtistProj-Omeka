@@ -576,7 +576,7 @@ textarea {
     background-color: #000000;
     vertical-align: top;
     padding: 12px 48px;
-    text-align: right;
+    text-align: left;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -1260,14 +1260,22 @@ textarea {
     font-size:1em;
 }*/
 
+/*
 .exhibits.browse #wrap nav ul li a{
     color:black;
 }
+*/
 
 footer{
-    margin-top:-50px;
     padding-top:120px;
 }
+
+.items.show footer, #home footer{
+    margin-top:-50px;
+}
+
+
+
 
 
 @media screen and (max-width: 640px){
@@ -1294,4 +1302,10 @@ footer{
     .grid-item--width2{
         width:96%;
     }
+    
+    .items.show #wrap #itemfiles .media-render img{
+        max-width:100%;
+    }
+    
+
 }
