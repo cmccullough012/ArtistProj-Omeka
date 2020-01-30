@@ -1246,6 +1246,8 @@ textarea {
 
 /*ADDED STYLES*/
 
+/*NOTE: IMPORTANT these are replicated and likely overwritten by the CSS plugin in Omeka. This is to ensure that things don't break too badly on update. If you change things here and they don't take effect, check there.*/
+
 #intro pre a{
     color:white;
 }

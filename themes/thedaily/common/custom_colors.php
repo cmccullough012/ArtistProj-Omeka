@@ -62,6 +62,26 @@ input[type="submit"] {
     box-shadow:0px 0px 10px <?php echo $exhibitCurrentLink; ?>;
 }
     
+
+.simple-page #wrap a{
+     color: <?php echo $exhibitNavText; ?>;
+    background-color:<?php echo $exhibitNavBg; ?>;
+}
+
+.simple-page #wrap a:hover{
+    color:<?php echo $exhibitNavBg; ?>;
+     background-color: <?php echo $exhibitCurrentLink; ?>;
+}
+        
+    
+.items.show #content p a:hover, .items.show #content a:hover, .items.show #content ul a:hover{
+    background-color: <?php echo $exhibitCurrentLink; ?>;  
+}
+    
+.items.show #site-title a:hover{
+    background-color:rgb(0,0,0,0);
+}    
+    
 #exhibit-pages li.current > a:before,
 #exhibit-pages li.parent.collapsed > a:before,
 #exhibit-pages li.current a
@@ -73,6 +93,8 @@ input[type="submit"] {
     background-color:<?php echo $exhibitNavBg; ?>;
     color:<?php echo $exhibitNavText; ?>;
 }
+    
+
     
 footer{
     background-color:<?php echo $exhibitNavBg; ?>;
