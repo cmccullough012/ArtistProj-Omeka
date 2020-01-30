@@ -63,12 +63,12 @@ input[type="submit"] {
 }
     
 
-.simple-page #wrap a{
+.simple-page #wrap #content a{
      color: <?php echo $exhibitNavText; ?>;
     background-color:<?php echo $exhibitNavBg; ?>;
 }
 
-.simple-page #wrap a:hover{
+.simple-page #wrap #content a:hover{
     color:<?php echo $exhibitNavBg; ?>;
      background-color: <?php echo $exhibitCurrentLink; ?>;
 }
