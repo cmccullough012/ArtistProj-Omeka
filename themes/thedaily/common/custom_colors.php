@@ -1,9 +1,13 @@
 <?php
+    ($text = get_theme_option('general_text')) || ($text = "#FFFFFF");
+    ($background = get_theme_option('general_background')) || ($text = "#000000");
+    ($link = get_theme_option('general_link')) || ($text = "#FFFF00");
     ($buttonBg = get_theme_option('button_background')) || ($buttonBg = "#FFFF00");
     ($buttonText = get_theme_option('button_text')) || ($buttonText = "#000000");
     ($exhibitNavBg = get_theme_option('eb_nav_background')) || ($linkColor = "#FFFF00");
     ($exhibitNavText = get_theme_option('eb_nav_text')) || ($linkText = "#000000");
     ($exhibitCurrentLink = get_theme_option('eb_current')) || ($linkColor = "#FFFF00");
+    ($exhibitBackground = get_theme_option('eb_background')) || ($background = "#000000");
     ($featuredBg = get_theme_option('featured_background')) || ($featuredBg = "#000000");
     ($featuredText = get_theme_option('featured_text')) || ($featuredText = "#FFFFFF");
     ($homeIntroBg = get_theme_option('home_intro_background')) || ($homeIntroBg = "#FFFF00");
@@ -13,17 +17,12 @@
 ?>
 
 <style>
+    
+p, h1, h2, h3, h4, h5, h6{
+    color: <?php echo $text; ?>;
+}
 
-p a,
-span a,
-table a,
-.secondary-nav li a,
-.pagination a,
-.item-pagination a,
-#sort-links a,
-.element-text a,
-#exhibit-page-navigation a,
-#featured .featured-meta h3,
+
 .button,
 button,
 input[type="submit"],
@@ -37,9 +36,31 @@ button,
 input[type="submit"] {
     border-color: <?php echo $buttonText; ?>
 }
+    
+p a,
+span a,
+table a,
+.secondary-nav li a,
+.pagination a,
+.item-pagination a,
+#sort-links a,
+.element-text a,
+#exhibit-page-navigation a,
+#featured .featured-meta h3,
+.simple-page #wrap #content a{
+    color: <?php echo $link; ?>;
+}    
 
-#exhibit-pages, .exhibits.browse, .exhibits.summary{
-    background-color: <?php echo $exhibitNavBg; ?>;
+.simple-page .items.show {
+    background-color: <?php echo $background; ?>;
+}    
+    
+#exhibit-pages, .exhibits.browse, .exhibits.summary, .exhibits.show, #exhibit-pages h4, #exhibit-pages h4 a{
+    background-color: <?php echo $exhibitBackground; ?>;
+}
+    
+#exhibit-pages h4, #exhibit-pages h4 a{
+    color:<?php echo $text; ?>;
 }
 
 #exhibit-pages a, .exhibits.browse a, .exhibits.browse h1, .exhibits.summary a, .exhibits.summary h1,  .exhibits.summary{
@@ -63,14 +84,10 @@ input[type="submit"] {
 }
     
 
-.simple-page #wrap #content a{
-     color: <?php echo $exhibitNavText; ?>;
-    background-color:<?php echo $exhibitNavBg; ?>;
-}
 
 .simple-page #wrap #content a:hover{
-    color:<?php echo $exhibitNavBg; ?>;
-     background-color: <?php echo $exhibitCurrentLink; ?>;
+    color:<?php echo $background; ?>;
+     background-color: <?php echo $link; ?>;
 }
         
     
@@ -111,12 +128,12 @@ nav#exhibit-pages h4 a:hover,
 } 
 
 .navigation.secondary-nav ul li a{
-    color:black !important;
+    color:<?php echo $buttonText; ?> !important;
 }
 
 .navigation.secondary-nav ul li a:hover, .item-pagination.navigation li a:hover{
-    color:black !important;
-    background-color: <?php echo $exhibitCurrentLink; ?>;
+    color:white !important;
+    background-color: <?php echo $buttonText; ?>;
 }
     
 #featured .featured-meta > * {
@@ -135,6 +152,11 @@ nav#exhibit-pages h4 a:hover,
 
 #intro a{
     color: <?php echo $homeLinks; ?>;
+}
+    
+#site-title a{
+    background-color:black !important;
+    color:white !important;
 }
 
 
