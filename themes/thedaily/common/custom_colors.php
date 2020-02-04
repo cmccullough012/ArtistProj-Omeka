@@ -8,6 +8,8 @@
     ($exhibitNavText = get_theme_option('eb_nav_text')) || ($linkText = "#000000");
     ($exhibitCurrentLink = get_theme_option('eb_current')) || ($linkColor = "#FFFF00");
     ($exhibitBackground = get_theme_option('eb_background')) || ($background = "#000000");
+    ($itemBackground = get_theme_option('item_background')) || ($background = "#000000");
+    ($itemText = get_theme_option('item_text')) || ($background = "#FFFFFF");
     ($featuredBg = get_theme_option('featured_background')) || ($featuredBg = "#000000");
     ($featuredText = get_theme_option('featured_text')) || ($featuredText = "#FFFFFF");
     ($homeIntroBg = get_theme_option('home_intro_background')) || ($homeIntroBg = "#FFFF00");
@@ -26,7 +28,7 @@ p, h1, h2, h3, h4, h5, h6{
 .button,
 button,
 input[type="submit"],
-.view-items-link {
+.view-items-link, .item-pagination a, .secondary-nav li a, .pagination a,#sort-links a, element-text a {
     background-color: <?php echo $buttonBg; ?>;
     color: <?php echo $buttonText; ?>;
 }
@@ -47,15 +49,17 @@ table a,
 .element-text a,
 #exhibit-page-navigation a,
 #featured .featured-meta h3,
-.simple-page #wrap #content a{
+.simple-page #wrap #content a, 
+footer a{
     color: <?php echo $link; ?>;
+    background-color:rgb(0,0,0,0);
 }    
 
-.simple-page .items.show {
+.simple-page .items.show, footer {
     background-color: <?php echo $background; ?>;
 }    
     
-#exhibit-pages, .exhibits.browse, .exhibits.summary, .exhibits.show, #exhibit-pages h4, #exhibit-pages h4 a{
+#exhibit-pages, .exhibits.browse, .exhibits.summary, .exhibits.show, #exhibit-pages h4, #exhibit-pages h4 a {
     background-color: <?php echo $exhibitBackground; ?>;
 }
     
@@ -83,12 +87,22 @@ table a,
     box-shadow:0px 0px 10px <?php echo $exhibitCurrentLink; ?>;
 }
     
-
+p a, .element-text a{
+    color:<?php echo $link; ?>;
+    background-color:rgb(0,0,0,0);
+}
+    
+p a:hover, .element-text a:hover{
+    color:<?php echo $background; ?>;
+    background-color: <?php echo $link; ?>;
+}
 
 .simple-page #wrap #content a:hover{
     color:<?php echo $background; ?>;
-     background-color: <?php echo $link; ?>;
+    background-color: <?php echo $link; ?>;
 }
+    
+
         
     
 .items.show #content p a:hover, .items.show #content a:hover, .items.show #content ul a:hover{
@@ -106,19 +120,10 @@ table a,
     color: <?php echo $exhibitCurrentLink; ?>;
 }  
     
-.items.show #wrap{
-    background-color:<?php echo $exhibitNavBg; ?>;
-    color:<?php echo $exhibitNavText; ?>;
-}
-    
 
     
-footer{
-    background-color:<?php echo $exhibitNavBg; ?>;
-}
-    
-footer a{
-    color:<?php echo $exhibitNavText; ?>;
+.exhibits footer{
+    background-color:<?php echo $exhibitBackground; ?>;
 }
     
 nav#exhibit-pages li a:hover,
@@ -150,13 +155,26 @@ nav#exhibit-pages h4 a:hover,
     color: <?php echo $homeIntroText; ?>;
 }
 
-#intro a{
-    color: <?php echo $homeLinks; ?>;
+#intro a, #intro p a{
+    color: <?php echo $homeIntroText; ?>;
 }
+
+
+#intro a:hover, #intro p a:hover{
+    color: <?php echo $homeLinks; ?>;
+    background-color:rgb(0,0,0,0);
+}
+
     
 #site-title a{
     background-color:black !important;
     color:white !important;
+}
+    
+.items.show, .items.show footer {
+    color:<?php echo $itemText; ?>;
+    background-color:<?php echo $itemBackground; ?>;
+}
 }
 
 

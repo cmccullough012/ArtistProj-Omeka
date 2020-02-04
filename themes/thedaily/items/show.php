@@ -39,9 +39,11 @@ echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bod
             <div class="media-render">
             <?php echo file_image('original', array(), $image); ?>
             </div>
-            <div class="media-link-<?php echo $imageCount; ?>">
-            <a href="<?php echo $fileUrl; ?>"><?php echo metadata($image, 'display_title'); ?></a>
+<!--
+            <div class="media-link-<? php /*echo $imageCount;*/ ?>">
+            <a href="<?php /*echo $fileUrl;*/ ?>"><?php /*echo metadata($image, 'display_title');*/ ?></a>
             </div>
+-->
         </li>
         <?php endforeach; ?>
     </ul>

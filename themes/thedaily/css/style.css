@@ -1,14 +1,14 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime:400,400i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Verdana', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -373,7 +373,7 @@ textarea {
   * {
     box-sizing: border-box; }
   html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-size: 3vmin;
     line-height: 4.5vmin;
     margin: 0;
@@ -454,7 +454,7 @@ textarea {
        -moz-appearance: none;
             appearance: none;
     padding: 6px 12px;
-    background-color: yellow;
+    background-color: yellow; 
     border: 3px solid #000;
 /*    font-family: "Archivo Black", sans-serif;*/
     cursor: pointer; }
@@ -497,7 +497,7 @@ textarea {
     border-spacing: 3px; }
   th:not(:empty) {
     background-color: #000;
-    color: #ccc;
+    color: #FFFFFF;
     text-align: left; }
   td,
   th {
@@ -912,7 +912,7 @@ textarea {
   .show .view-items-link {
     display: inline-block;
     margin: 24px auto;
-    font-family: "Archivo Black", sans-serif;
+/*    font-family: "Archivo Black", sans-serif;*/
     padding: 6px; }
   /* @end */
   /* @group ----- Advanced Item Search ----- */
@@ -1182,7 +1182,8 @@ textarea {
   #top-nav > ul {
     display: block;
     overflow: scroll;
-    padding-bottom: 96px; }
+    padding-bottom: 96px;
+    padding-left:24px}
   #top-nav ul ul ul li {
     font-size: 3vmin;
     line-height: 4.5vmin; }
@@ -1258,13 +1259,6 @@ p{
     line-height: 1.7em;
 }
 
-#intro p a{
-    color:black;
-}
-
-#intro p a:hover{
-    color:#D04E46;
-}
 
 /* back to top link at bottom 
 #footer-content a{
@@ -1297,6 +1291,10 @@ width:80%
 
 .exhibits.browse .description{
 display:none;
+}
+
+.collections.show .item.hentry .creator{
+    display:none;
 }
 
 
