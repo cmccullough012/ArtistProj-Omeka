@@ -67,16 +67,27 @@ footer a{
     color:<?php echo $text; ?>;
 }
 
-#exhibit-pages a, .exhibits.browse a, .exhibits.browse h1, .exhibits.summary a, .exhibits.summary h1,  .exhibits.summary{
+.exhibits.browse h1, .exhibits.summary a, .exhibits.summary h1,  .exhibits.summary{
     color: <?php echo $exhibitNavText; ?>;
 }
     
+    
+    #exhibit-pages a, .exhibits.browse a, .exhibits.show a{
+        color:<?php echo $exhibitCurrentLink; ?>;
+    }    
+    
+    #exhibit-pages li > a{
+        color:<?php echo $exhibitNavText; ?>;
+    }
+/*
 .exhibit-block li a, #exhibit-pages li.current ul li a{
-    background-color:<?php echo $exhibitNavText; ?>;
+    background-color: [exhibit nav text];
 }
+*/
 
 .exhibit-block li a:hover, .exhibit-block a:hover, .exhibit-block p a:hover {
     background-color:<?php echo $exhibitCurrentLink; ?>;
+    color:<?php echo $exhibitNavText; ?>;
 }   
     
 .exhibit-block.layout-file a:hover, .exhibit-gallery-item a:hover{
