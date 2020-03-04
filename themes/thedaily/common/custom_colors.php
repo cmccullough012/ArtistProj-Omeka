@@ -14,7 +14,8 @@
     ($featuredText = get_theme_option('featured_text')) || ($featuredText = "#FFFFFF");
     ($homeIntroBg = get_theme_option('home_intro_background')) || ($homeIntroBg = "#FFFF00");
     ($homeIntroText = get_theme_option('home_intro_text')) || ($homeIntroText = "#000000");
-    ($topNavHighlightText = get_theme_option('top_nav_highlight_text')) || ($buttonBg = "#FFFF00");
+    ($mainNavText = get_theme_option('main_nav_text')) || ($mainNavText = "#FFFFFF");
+    ($mainNavBg = get_theme_option('main_nav_bg')) || ($mainNavBg = "rgb(0,0,0,.9)");
     ($homeLinks = get_theme_option('home_intro_link')) || ($linkText = "#FFFF00");
 ?>
 
@@ -158,7 +159,11 @@ nav#exhibit-pages h4 a:hover,
 }
 
 #top-nav > ul > li > a {
-    color: <?php echo $topNavHighlightText; ?>;
+    color: <?php echo $mainNavText; ?>;
+}
+    
+#top-nav > ul {
+    background-color:<?php echo $mainNavBg; ?>
 }
 
 #intro {

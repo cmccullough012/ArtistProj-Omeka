@@ -5,7 +5,9 @@ $pageTree = exhibit_builder_page_tree();
 if ($pageTree):
 ?>
 <nav id="exhibit-pages">
+    <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
     <?php echo $pageTree; ?>
+    <h4><a href="http://archive.charmainewheatley.ca/exhibits" >Browse Exhibits</a></h4>
 </nav>
 <?php endif; ?>
 
