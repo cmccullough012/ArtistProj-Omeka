@@ -1306,7 +1306,7 @@ display:none;
 /* Side nav rather than whole page */ 
 @media screen and (min-width: 640px){
     #top-nav > ul{
-        width: 22%;
+        width: 35%;
         max-width: 500px;
         min-width:225px;
         left: unset;
@@ -1314,6 +1314,12 @@ display:none;
 
     #top-nav > ul > li{
         width:100%;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #top-nav > ul{
+        width: 29%;
     }
 }
     

@@ -187,6 +187,10 @@ nav#exhibit-pages h4 a:hover,
     color:white !important;
 }
     
+header #site-title a:hover{
+    color: <?php echo $exhibitCurrentLink; ?> !important;
+}
+    
 .items.show, .items.show footer {
     color:<?php echo $itemText; ?>;
     background-color:<?php echo $itemBackground; ?>;
