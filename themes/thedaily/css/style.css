@@ -1302,12 +1302,15 @@ display:none;
 }
 
 
+#exhibit-pages ul li a, #exhibit-pages h4{
+    padding-left:0px !important;
+}
 
 /* Side nav rather than whole page */ 
 @media screen and (min-width: 640px){
     #top-nav > ul{
         width: 35%;
-        max-width: 500px;
+        max-width: 350px;
         min-width:225px;
         left: unset;
     }
