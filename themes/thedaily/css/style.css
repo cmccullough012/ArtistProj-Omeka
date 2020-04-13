@@ -1301,10 +1301,11 @@ display:none;
     width:80%;
 }
 
-
-#exhibit-pages ul li a, #exhibit-pages h4{
+/* Left align title with nav on summary pages */
+.exhibits.summary #exhibit-pages ul li a, .exhibits.summary #exhibit-pages h4{
     padding-left:0px !important;
 }
+
 
 /* Side nav rather than whole page */ 
 @media screen and (min-width: 640px){
@@ -1318,6 +1319,8 @@ display:none;
     #top-nav > ul > li{
         width:100%;
     }
+    
+
 }
 
 @media screen and (min-width: 1500px){
