@@ -1309,10 +1309,30 @@ display:none;
 /* Item show page changes */ 
 .items.show #content h1{
     font-size: 4.25vmin;
+    float:left;
 }
 
 .items.show #content h2{
     font-size: 3.75vmin;
+}
+
+.items.show #content .lSSlideOuter{
+    clear:both;
+}
+
+ul.item-pagination.navigation{
+    margin-top:1em;
+}
+
+.items.show .item-pagination a{
+    padding:9px 30px;
+}
+
+.items.show #content nav{
+    max-width: 400px;
+    float: right;
+    padding-top: 0;
+    margin: 0 0 24px
 }
 
 /* Side nav rather than whole page */ 
@@ -1371,5 +1391,20 @@ display:none;
         line-height:2.5em;
     }
     
+    
+    /*Items show page */ 
+    
+    .items.show #content h1{
+        margin:0;
+    }
+
+    .items.show .item-pagination a{
+        padding:0;
+    }
+
+    .items.show #content nav{
+        width: 100%;
+        margin: 0;
+    }
 
 }
