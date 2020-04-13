@@ -1306,6 +1306,14 @@ display:none;
     padding-left:0px !important;
 }
 
+/* Item show page changes */ 
+.items.show #content h1{
+    font-size: 4.25vmin;
+}
+
+.items.show #content h2{
+    font-size: 3.75vmin;
+}
 
 /* Side nav rather than whole page */ 
 @media screen and (min-width: 640px){
